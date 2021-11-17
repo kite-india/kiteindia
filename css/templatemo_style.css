@@ -235,7 +235,7 @@ hr {
 
 .main-menu ul li {
     display: inline-block;
-    float: left;
+    float:left;
     padding-left: 25px;
     padding-right: 25px;
     border-left: 1px solid #eee;
@@ -312,7 +312,7 @@ a.toggle-menu {
 
 .flex-caption {
     position: absolute;
-    wdith: 100%;
+    width: 100%;
     margin-left: 15px;
     left: 0;
     bottom: 100px;
