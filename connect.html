@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Kite registration form</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/connect.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main-block">
-      <div class="left-part">
-        <img style="width: 70px; height: 70px;" src="images/kite india.png">
-        <h3 style="font-family: sans-serif;">KITE INDIA</h3>
-        <h1>Register to our Pckages</h1>
-        <p>Go with the flow</p>
-        <div class="btn-group">
-          <a class="btn-item" href="#">Travel Packages</a>
-          <a class="btn-item" href="#">Hotel Booking</a>
+        <div class="left-part">
+            <img style="width: 70px; height: 70px;" src="images/kite india.png">
+            <h3 style="font-family: sans-serif;">KITE INDIA</h3>
+            <h1>Register to our Pckages</h1>
+            <p>Go with the flow</p>
+            <div class="btn-group">
+                <a class="btn-item" href="#">Travel Packages</a>
+                <a class="btn-item" href="#">Hotel Booking</a>
+            </div>
         </div>
-      </div>
-      <form id="submit-form" action="">
-        <div class="title">
-          <h2>Book here</h2>
-        </div>
-        <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="email" placeholder="Email">
-          <input type="text" name="mobile" placeholder="Phone number">
-          <input type="text" name="instagram" placeholder="Instagram Id">
-          <select id="Packages" name="package">
-            <option value="Package" selected>Packages</option>
-            <option value="himachal">Manali,Kullu,Kasol</option>
-            <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
-            <option value="up">Delhi,Agra,Jaipur</option>
-            <option value="kashmir">Srinagar,Gulmarg,Sonamarg,Pahalgam</option>
-            <option value="wayanad">Wayanad</option>
-            <option value="goa">Anjuna,Baga,calangute</option>
-            <option value="munnar">Munnar,Idukki</option>
-          </select>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy for Kite India.</a></span>
-        </div>
-        <button type="submit" href="/">Submit</button>
-      </form>
+        <form id="submit-form" action="">
+            <div class="title">
+                <h2>Book here</h2>
+            </div>
+            <div class="info">
+                <input class="fname" type="text" name="name" placeholder="Full name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="mobile" placeholder="Phone number">
+                <input type="text" name="instagram" placeholder="Instagram Id">
+                <select id="Packages" name="package">
+                    <option value="Package" selected>Packages</option>
+                    <option value="himachal">Manali,Kullu,Kasol</option>
+                    <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
+                    <option value="up">Delhi,Agra,Jaipur</option>
+                    <option value="kashmir">Srinagar,Gulmarg,Sonamarg,Pahalgam</option>
+                    <option value="wayanad">Wayanad</option>
+                    <option value="goa">Anjuna,Baga,calangute</option>
+                    <option value="munnar">Munnar,Idukki</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy for Kite
+                        India.</a></span>
+            </div>
+            <button type="submit" href="/">Submit</button>
+        </form>
     </div>
     <script>
-        $("#submit-form").submit((e)=>{
+        $("#submit-form").submit((e) => {
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbxizzoT2dY9rmrIcNq0nJWOBy1n01HJcsqJ25cz00kJ_FcN_pg7PmOii66Y9TiHB1ebIw/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
+                url: "https://script.google.com/macros/s/AKfycbxizzoT2dY9rmrIcNq0nJWOBy1n01HJcsqJ25cz00kJ_FcN_pg7PmOii66Y9TiHB1ebIw/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
                     alert("Form submitted successfully")
                     window.location.reload()
-                   window.location.href="index.html"
+                    window.location.href = "index.html"
                 },
-                error:function (err){
+                error: function (err) {
                     alert("Something Error")
-    
+
                 }
             })
         })
     </script>
 
-  </body>
+</body>
+
 </html>
