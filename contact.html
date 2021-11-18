@@ -23,6 +23,7 @@ http://www.templatemo.com/tm-409-travel
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
 </head>
@@ -100,7 +101,7 @@ http://www.templatemo.com/tm-409-travel
                 <div class="col-md-5 col-sm-6">
                     <h3 class="widget-title">Contact Us</h3>
                     <div class="contact-form">
-                        <form name="contactform" id="contactform" action="#" method="post">
+                        <form id="contactform" action="" method="post">
                             <p>
                                 <input name="name" type="text" id="name" placeholder="Your Name">
                             </p>
@@ -113,7 +114,7 @@ http://www.templatemo.com/tm-409-travel
                             <p>
                                 <textarea name="message" id="message" placeholder="Message"></textarea>
                             </p>
-                            <input type="submit" class="mainBtn" id="submit" value="Send Message">
+                            <button type="submit" href="/">Submit</button>
                         </form>
                     </div> <!-- /.contact-form -->
                 </div>
@@ -219,7 +220,26 @@ http://www.templatemo.com/tm-409-travel
             });
         });
     </script>
-    <!-- templatemo 409 travel -->
+    
+    <script>
+        $("#contactform").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwiKyT5kunC0x4wr6TT-QNWwDxuWPzbw1qNm7qZ_lIyXb9DwjRu4Wj0ZXnLjNsjKYBY/exec",
+                data:$("#contactform").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                   window.location.href="index.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
