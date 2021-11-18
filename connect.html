@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/connect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="main-block">
@@ -18,16 +19,16 @@
           <a class="btn-item" href="#">Hotel Booking</a>
         </div>
       </div>
-      <form action="/">
+      <form id="submit-form" action="">
         <div class="title">
           <h2>Book here</h2>
         </div>
         <div class="info">
           <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="Email">
-          <input type="text" name="name" placeholder="Phone number">
-          <input type="text" name="name" placeholder="Instagram Id">
-          <select>
+          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="mobile" placeholder="Phone number">
+          <input type="text" name="instagram" placeholder="Instagram Id">
+          <select id="country">
             <option value="Package" selected>Packages*</option>
             <option value="himachal">Manali,Kullu,Kasol</option>
             <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
@@ -44,5 +45,25 @@
         <button type="submit" href="/">Submit</button>
       </form>
     </div>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxizzoT2dY9rmrIcNq0nJWOBy1n01HJcsqJ25cz00kJ_FcN_pg7PmOii66Y9TiHB1ebIw/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                   window.location.href="index.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
   </body>
 </html>
