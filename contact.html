@@ -225,11 +225,11 @@ http://www.templatemo.com/tm-409-travel
         $("#contactform").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbwiKyT5kunC0x4wr6TT-QNWwDxuWPzbw1qNm7qZ_lIyXb9DwjRu4Wj0ZXnLjNsjKYBY/exec",
+                url:"https://script.google.com/macros/s/AKfycbwpFcg04Ptaf-cvXKGS-_8suqYo23sG0ZOyeoJ968iZPm7OuM1kVhOJpxmDtHg9ahUJ/exec",
                 data:$("#contactform").serialize(),
                 method:"post",
                 success:function (response){
-                    alert("Form submitted successfully")
+                    alert("Thankyou for contacting us, We'll touch you soon")
                     window.location.reload()
                    window.location.href="index.html"
                 },
