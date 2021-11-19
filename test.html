@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kite registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/connect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="main-block ">
+
+                <img style="width: 70px; height: 70px;" src="images/kite india.png">
+                <h3 style="font-family: sans-serif;">KITE INDIA</h3>
+                <h1>Register to our Pckages</h1>
+                <p>Go with the flow</p>
+                <div class="btn-group">
+                    <a class="btn-item" href="#">Travel Packages</a>
+                    <a class="btn-item" href="#">Hotel Booking</a>
+                </div>
+            </div>
+
+            
+                <form id="submit-form" action="">
+                    <div class="title">
+                        <h2>Book here</h2>
+                    </div>
+                    <div class="info">
+                        <input class="fname" type="text" name="name" placeholder="Full name">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="mobile" placeholder="Phone number">
+                        <input type="text" name="instagram" placeholder="Instagram Id">
+                        <select id="Packages" name="package">
+                            <option value="Package" selected>Packages</option>
+                            <option value="himachal">Manali,Kullu,Kasol</option>
+                            <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
+                            <option value="up">Delhi,Agra,Jaipur</option>
+                            <option value="kashmir">Srinagar,Gulmarg,Sonamarg,Pahalgam</option>
+                            <option value="wayanad">Wayanad</option>
+                            <option value="goa">Anjuna,Baga,calangute</option>
+                            <option value="munnar">Munnar,Idukki</option>
+                        </select>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy for
+                                Kite
+                                India.</a></span>
+                    </div>
+                    <button type="submit" href="/">Pre Book Now</button>
+                </form>
+            
+        </div>
+    </div>
+    </div>
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbxizzoT2dY9rmrIcNq0nJWOBy1n01HJcsqJ25cz00kJ_FcN_pg7PmOii66Y9TiHB1ebIw/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
+                    alert("Pre booking submitted successfully..Our team contacts you soon")
+                    window.location.reload()
+                    window.location.href = "index.html"
+                },
+                error: function (err) {
+                    alert("Something Error")
+
+                }
+            })
+        })
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
