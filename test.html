@@ -11,44 +11,53 @@
 </head>
 
 <body>
-    <div class="main-block">
-        <div class="left-part">
-            <img style="width: 70px; height: 70px;" src="images/kite india.png">
-            <h3 style="font-family: sans-serif;">KITE INDIA</h3>
-            <h1>Register to our Pckages</h1>
-            <p>Go with the flow</p>
-            <div class="btn-group">
-                <a class="btn-item" href="#">Travel Packages</a>
-                <a class="btn-item" href="#">Hotel Booking</a>
+    <div class="container">
+        <div class="row">
+            <div class="main-block col-12">
+                <div class="left-part">
+                    <img style="width: 70px; height: 70px;" src="images/kite india.png">
+                    <h3 style="font-family: sans-serif;">KITE INDIA</h3>
+                    <h1>Register to our Pckages</h1>
+                    <p>Go with the flow</p>
+                    <div class="btn-group">
+                        <a class="btn-item" href="#">Travel Packages</a>
+                        <a class="btn-item" href="#">Hotel Booking</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <form id="submit-form" action="">
+                    <div class="title">
+                        <h2>Book here</h2>
+                    </div>
+                    <div class="info">
+                        <input class="fname" type="text" name="name" placeholder="Full name">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="mobile" placeholder="Phone number">
+                        <input type="text" name="instagram" placeholder="Instagram Id">
+                        <select id="Packages" name="package">
+                            <option value="Package" selected>Packages</option>
+                            <option value="himachal">Manali,Kullu,Kasol</option>
+                            <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
+                            <option value="up">Delhi,Agra,Jaipur</option>
+                            <option value="kashmir">Srinagar,Gulmarg,Sonamarg,Pahalgam</option>
+                            <option value="wayanad">Wayanad</option>
+                            <option value="goa">Anjuna,Baga,calangute</option>
+                            <option value="munnar">Munnar,Idukki</option>
+                        </select>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy for
+                                Kite
+                                India.</a></span>
+                    </div>
+                    <button type="submit" href="/">Pre Book Now</button>
+                </form>
             </div>
         </div>
-        <form id="submit-form" action="">
-            <div class="title">
-                <h2>Book here</h2>
-            </div>
-            <div class="info">
-                <input class="fname" type="text" name="name" placeholder="Full name">
-                <input type="text" name="email" placeholder="Email">
-                <input type="text" name="mobile" placeholder="Phone number">
-                <input type="text" name="instagram" placeholder="Instagram Id">
-                <select id="Packages" name="package">
-                    <option value="Package" selected>Packages</option>
-                    <option value="himachal">Manali,Kullu,Kasol</option>
-                    <option value="rajasthan">Jaipur,Pushkar,Ajmer</option>
-                    <option value="up">Delhi,Agra,Jaipur</option>
-                    <option value="kashmir">Srinagar,Gulmarg,Sonamarg,Pahalgam</option>
-                    <option value="wayanad">Wayanad</option>
-                    <option value="goa">Anjuna,Baga,calangute</option>
-                    <option value="munnar">Munnar,Idukki</option>
-                </select>
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy for Kite
-                        India.</a></span>
-            </div>
-            <button type="submit" href="/">Pre Book Now</button>
-        </form>
     </div>
+    </div>
+
     <script>
         $("#submit-form").submit((e) => {
             e.preventDefault()
@@ -69,9 +78,15 @@
         })
     </script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
