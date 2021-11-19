@@ -1,7 +1,7 @@
 
       html, body {
       min-height: 100%;
-      background-image: url(https://wallpapercave.com/wp/wp3079215.jpg);
+      /*!background-image: url(https://wallpapercave.com/wp/wp3079215.jpg);*/
       }
       body, div, form, input, select, p { 
       padding: 0;
