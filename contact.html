@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <title>Contact - KiteIndia</title>
     <meta name="description" content="Travel and Adventurebooking platform">
-   
+
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="kiteindia">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="images/kite india.png"/>
+    <link rel="icon" type="image/png" href="images/kite india.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    
+
 
     <div class="site-header">
         <div class="container">
@@ -82,9 +82,9 @@
                                 <li>4 th cross AGB Layout, Dasarhalli</li>
                                 <li>Contact : 7902220044 / 8848774621 </li>
                                 <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  9048875664 / 9846947599
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 9048875664 / 9846947599
                                 </li>
-                                <li>Email: <a href="mailto:info@company.com">info@company.com</a></li>
+                                <li>Email: <a href="kiteindia.co@gmail.com">kiteindia.co@gmail.com"</a></li>
                             </strong>
                         </ul>
                     </div>
@@ -105,7 +105,10 @@
                             <p>
                                 <textarea name="message" id="message" placeholder="Message"></textarea>
                             </p>
-                            <button type="submit" href="/">Submit</button>
+                            <button type="submit" href="/" style=" 
+                            background: lightgray;
+                            color: rgb(8, 1, 1);
+                            ">Submit</button>
                         </form>
                     </div> <!-- /.contact-form -->
                 </div>
@@ -211,22 +214,22 @@
             });
         });
     </script>
-    
+
     <script>
-        $("#contactform").submit((e)=>{
+        $("#contactform").submit((e) => {
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbwpFcg04Ptaf-cvXKGS-_8suqYo23sG0ZOyeoJ968iZPm7OuM1kVhOJpxmDtHg9ahUJ/exec",
-                data:$("#contactform").serialize(),
-                method:"post",
-                success:function (response){
+                url: "https://script.google.com/macros/s/AKfycbwpFcg04Ptaf-cvXKGS-_8suqYo23sG0ZOyeoJ968iZPm7OuM1kVhOJpxmDtHg9ahUJ/exec",
+                data: $("#contactform").serialize(),
+                method: "post",
+                success: function (response) {
                     alert("Thankyou for contacting us, We'll touch you soon")
                     window.location.reload()
-                   window.location.href="index.html"
+                    window.location.href = "index.html"
                 },
-                error:function (err){
+                error: function (err) {
                     alert("Something Error")
-    
+
                 }
             })
         })
